@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>스크린 사이즈 구하기</title>
+</head>
+<body>
+<div id="result">d</div>
+<script src="util.js"></script>
+<script>
+;(function(window, document){
+	var el = document.getElementById('result');
+
+	window.onload = function(){	
+		viewScreenSize();
+	}
+
+	window.onresize = function(){
+		viewScreenSize();
+	};
+
+	function viewScreenSize(){
+		var screenSize = commonUtils.getScreenSize();
+		el.innerHTML = 'screen width : ' + screenSize.width + ', screen height : ' + screenSize.height;
+	}
+
+})(window, document);
+		
+</script>
+	
+</body>
+</html>
