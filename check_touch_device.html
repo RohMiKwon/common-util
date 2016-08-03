@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>터치 기기 체크 예제</title>
+</head>
+<body>
+	<script src="util.js"></script>
+	<script>
+		window.onload = function(){
+			console.log(window.ontouchstart, '이벤트가 없는 경우 undefined, 콜백이 할당되지 않은 경우 null');
+
+			if(commonUtils.isTouchDevice()){
+				alert('터치 디바이스');	
+			}
+		}
+	</script>
+</body>
+</html>
